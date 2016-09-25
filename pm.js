@@ -8,6 +8,6 @@ function(context, args) // r:"",m:""
 	}
 	else{ //this sends the chat message provided the above 2 conditions are NOT met
 		#s.chats.tell({to:args.r,msg:args.m})
-		return{ok:true,msg:"Sent " #s.soron.color_utils({colorize:args.m, use_color:'F'}) + " to " + #s.soron.color_utils({colorize:args.r, use_color:'L'})}
+		return{ok:true,msg:"Sent " + #s.soron.color_utils({colorize:args.m, use_color:'F'}) + " to " + #s.soron.color_utils({colorize:args.r, use_color:'L'})}
 	}
 }
