@@ -4,10 +4,10 @@ function(context, args) // r:"",m:""
 		return{ok:true,msg:"mynameisroot.pm basic syntax \n mynameisroot.pm{r:\"recipient\",m:\"message\"}"}
 	}
 	else if (args.m == null|| args.r == null){ // this checks if either parameter is missing and complains if so.
-		return{ok:false,msg:"parameter missing."}
+		return{ok:false,msg:"Parameter missing."}
 	}
 	else{ //this sends the chat message provided the above 2 conditions are NOT met
 		#s.chats.tell({to:args.r,msg:args.m})
-		return{ok:true,msg:"Sent `5" + args.m + "` to `2" + args.r + "`"}
+		return{ok:true,msg:"Sent " #s.soron.color_utils({colorize:args.m, use_color:'F'}) + " to " + #s.soron.color_utils({colorize:args.r, use_color:'L'})}
 	}
 }
